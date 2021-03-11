@@ -11,7 +11,6 @@ public class Workday
 {
 
     public static Date calculateWorkday(final Date startDate, final int numberOfWOrkdays) {
-        // TODO: test and implement me!
 
         if (numberOfWOrkdays < 0) {
             throw new RuntimeException("Number of work days should be > 0");
@@ -31,13 +30,5 @@ public class Workday
         }
 
         return calendar.getTime();
-    }
-
-    public static void main( String[] args )
-    {
-        Calendar cal = Calendar.getInstance();
-        cal.set(2018, 2, 16);
-        Date date = cal.getTime();
-        System.out.println(Workday.calculateWorkday(date, 2));
     }
 }
