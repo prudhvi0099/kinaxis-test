@@ -22,11 +22,11 @@ public class Workday
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(startDate);
         for (int i = 0; i < numberOfWOrkdays; ) {
+            calendar.add(Calendar.DATE, 1);
             if (!(calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY ||
                     calendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)) {
                 i++;
             }
-            calendar.add(Calendar.DATE, 1);
         }
 
         return calendar.getTime();
